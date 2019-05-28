@@ -4,13 +4,247 @@
     padding: 0;
     font-size: 10px;
 }
+h1,
+h2{
+    font-size: 4.7rem;
+    font-family: var(--font);
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+body{
+    background-image: url(/img/background.png);
+    background-size: contain;
+    color: var(--color-font);
+    font-family: var(--font);
+}
+button{
+    cursor: pointer;
+}
 /*---------------------------------Imports */
+@font-face{
+    font-family: Avenir;
+    src: url("/fonts/Avenir.ttc");
+}
+@font-face{
+    font-family: FA;
+    src: url("/fonts/FontAwesome.ttf");
+}
 /*---------------------------------Varibles */
+:root{
+    --font: Avenir;
+    --font-SoMe: FA;
+    --color-btn-hl: #A2CBC7;
+    --color-btn-portfolio: rgba(5,15,28,0.56);
+    --color-btn-portfolio-active: rgba(162,203,199,0.55);
+    --color-font: #083150;
+    --color-accent: #DF7D00;
+}
 /*---------------------------------Header */
+header{
+    width: 100%;
+    min-height: calc(100vh - 7.5rem);
+}
+#heading-con{
+    width: calc(100% - 3rem);
+    margin: 10rem 0 0 3rem;
+}
+#heading-con h1{
+    text-align: left;
+    line-height: 3.5rem;
+}
+h1 span{
+    display: block;
+    font-size: 2.9rem;
+    font-weight: 100;
+}
 /*---------------------------------Navigation */
+#logo{
+    height: 80%;
+}
+#menu{
+    position: absolute;
+    z-index: 9998;
+    top: 0;
+    right: 0;
+    background: rgba(8,49,80,0.93);
+    width: 0;
+    height: 100vh;
+    text-align: center;
+    padding-top: 10.5rem;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: 0.75s;
+    transition: 0.75s;
+    overflow: hidden;
+}
+#menu a,#menu a:visited{
+    font-family: var(--font);
+    color: var(--color-accent);
+    display: block;
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.opened{
+    -webkit-transform: translateX(0) !important;
+    transform: translateX(0) !important;
+    width: 100% !important;
+}
+nav{
+    padding: 3rem;
+    height: 4.5rem;
+}
+#burger-menu{
+    position: relative;
+    width: 4.5rem;
+    float: right;
+    z-index: 9999;
+    cursor: pointer;
+    pointer-events: all;
+}
+#burger-menu span{
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    position: absolute;
+    width: 100%;
+    height: 0.7rem;
+    display: block;
+    margin: 0 0 .6rem 0;
+    border-radius: 0.25rem;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#df7d00+0,da7702+39,cb680b+71,b44f19+95,b24d1b+100 */
+background: #df7d00; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+background: -webkit-gradient(linear,  left top, right top,  from(#df7d00),color-stop(39%, #da7702),color-stop(71%, #cb680b),color-stop(95%, #b44f19),to(#b24d1b));
+background: linear-gradient(to right,  #df7d00 0%,#da7702 39%,#cb680b 71%,#b44f19 95%,#b24d1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df7d00', endColorstr='#b24d1b',GradientType=1 ); /* IE6-9 */
+
+}
+#burger-menu span:nth-child(1){
+    top: 0;
+}
+#burger-menu span:nth-child(2){
+    top: 1.4rem;
+}
+#burger-menu span:nth-child(3){
+    top: 2.8rem;
+}
+.topX,.bottomX{
+    top: 1.4rem !important;
+}
+.topX{
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.middel{
+    width: 0 !important;
+}
+.bottomX{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* arrow */
+#arrow{
+    position: absolute;
+    bottom: 3rem;
+    width: 3rem;
+    border: none;
+    background: url(/img/arrow.png);
+    left: calc(50% - 1.5rem);
+    -webkit-animation: arrow 2s infinite ease-out;
+    animation: arrow 2s infinite ease-out;
+}
+@-webkit-keyframes arrow{
+    0%{bottom: 3rem;}
+    50%{bottom: 6rem;}
+    100%{bottom: 3rem;}
+}
+@keyframes arrow{
+    0%{bottom: 3rem;}
+    50%{bottom: 6rem;}
+    100%{bottom: 3rem;}
+}
 /*---------------------------------Main content */
+main{
+    width: 100%;
+    position: relative;
+}
+section{
+    min-height: 100vh;
+}
+/* YouTube video embed code from embedresponsively.com */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Portfolio */
+#bntContainer{
+    width: calc(100% - 6rem);
+    margin: auto;
+}
+#bntContainer button{
+    padding: 1rem;
+    border: none;
+    background: var(--color-btn-portfolio);
+    font-family: var(--font);
+    color: var(--color-btn-hl);
+    font-size: 1.7rem;
+    margin: 0;
+    float: left;
+    border-radius: 1rem;
+    margin: 0 1.5rem 3rem 0;
+}
+#bntContainer button:hover{
+    background: var(--color-btn-hl);
+    color: var(--color)
+}
+#portContainer{
+    display: grid;
+    width: calc(100% - 3rem);
+    margin: auto;
+    grid-template-columns: 1fr;
+}
+.portElemt {
+    border: 1rem solid var(--color-font);
+    margin-bottom: 1.5rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.portElemt img{
+    width: 100%;
+    height: auto;
+}
 /*---------------------------------Footer */
-/*---------------------------------Footer */
+footer{
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    background: var(--color-btn-portfolio);
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+footer a{
+    display: block;
+    text-decoration: none;
+    color: var(--color-btn-hl);
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+}
 
 /*---------------------------------Media queries */
 /* iPad / Small Tablet */
@@ -18,7 +252,23 @@
 /*---------------------------------Header */
 /*---------------------------------Navigation */
 /*---------------------------------Main content */
-/*---------------------------------Footer */
+    /* YouTube video embed code from embedresponsively.com */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 /*---------------------------------Footer */
 }
 /* iPad Pro / Big Tablet */
