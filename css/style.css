@@ -14,6 +14,32 @@ li,
 span{
     font-family: var(--font);
 }
+ul{
+    list-style: none;
+}
+li{
+    margin: 0 0 1.5rem 0;
+}
+ul li{
+    position: relative;
+}
+ul li::before{
+    content: '\2022';
+    position: absolute;
+    left: -0.7em;
+    font-size: 2.1em;
+    vertical-align: top;
+    line-height: 1.6rem;
+}
+li,span{
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.6rem
+}
+p{
+    font-size: 1.6rem;
+    margin: 0 3.5rem 1.6rem 3.5rem;
+}
 a:hover{
     color: var(--color-btn-hl) !important;
 }
@@ -257,7 +283,7 @@ iframe{
     position: relative;
     width: 30rem;
     height: 30rem;
-    margin: auto;
+    margin: 0 auto 1.5rem auto;
     overflow: hidden;
     /*border-radius: 100%;*/
     display: block;
@@ -267,6 +293,13 @@ iframe{
     top: 0;
     left: 0;
     width: 100%;
+}
+ul{
+    width: calc(100% - 6rem);
+    margin: 0 0 5rem 4.5rem;
+}
+ul li span{
+    display: block;
 }
 /*---------------------------------Footer */
 footer{
@@ -288,10 +321,14 @@ footer a{
 footer ul{
     list-style: none;
     text-align: center;
+    margin: auto;
 }
 footer ul li{
     display: inline-block;
     margin: 0 1rem 0 1rem;
+}
+footer ul li::before{
+    content: '';
 }
 
 /*---------------------------------Media queries */
