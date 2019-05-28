@@ -15,7 +15,7 @@ span{
     font-family: var(--font);
 }
 a:hover{
-    color: var(--color-accent);
+    color: var(--color-btn-hl) !important;
 }
 h1,
 h2{
@@ -50,6 +50,7 @@ button{
     --color-btn-hl: #A2CBC7;
     --color-btn-portfolio: rgba(5,15,28,0.56);
     --color-btn-portfolio-active: rgba(162,203,199,0.55);
+    --color-backgrounds: rgba(8,49,80,0.93);
     --color-font: #083150;
     --color-accent: #DF7D00;
 }
@@ -81,7 +82,7 @@ h1 span{
     z-index: 9998;
     top: 0;
     right: 0;
-    background: rgba(8,49,80,0.93);
+    background: var(--color-backgrounds);
     width: 0;
     height: 100vh;
     text-align: center;
@@ -108,7 +109,7 @@ h1 span{
 }
 nav{
     padding: 3rem;
-    height: 4.5rem;
+    height: 3rem;
     top: 0;
     left: 0;
     position: fixed;
@@ -212,9 +213,9 @@ iframe{
     height: 100%;
 }
 /* Portfolio */
-#bntContainer{
+#bntContainer {
     width: calc(100% - 6rem);
-    margin: auto;
+    margin: 0 auto 7rem auto;
 }
 #bntContainer button{
     padding: 1rem;
@@ -233,10 +234,8 @@ iframe{
     color: var(--color) !important;
 }
 #portContainer{
-    display: grid;
-    width: calc(100% - 3rem);
-    margin: auto;
-    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto 4rem auto;
 }
 .portElemt {
     border: 1rem solid var(--color-btn-portfolio);
@@ -244,17 +243,37 @@ iframe{
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    display: grid;
 }
 .portElemt img{
     width: 100%;
     height: auto;
+}
+/*--------------Subpages */
+/* about */
+.imageCrop{
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    margin: auto;
+    overflow: hidden;
+    /*border-radius: 100%;*/
+    display: block;
+}
+.imageCrop img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 /*---------------------------------Footer */
 footer{
     width: 100%;
     height: auto;
     padding: 1.5rem;
-    background: var(--color-btn-portfolio);
+    background: var(--color-backgrounds);
     text-align: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -262,7 +281,7 @@ footer{
 footer a{
     display: block;
     text-decoration: none;
-    color: var(--color-btn-hl);
+    color: var(--color-accent);
     font-size: 2.5rem;
     margin: 0 0 1rem 0;
 }
@@ -278,9 +297,50 @@ footer ul li{
 /*---------------------------------Media queries */
 /* iPad / Small Tablet */
 @media (min-width: 768px){
+    .small{
+        display: none;
+    }
+    /*---------------------------------Navigation */
+    #logo {
+    height: 127%;
+}
+    nav{
+        background: var(--color-backgrounds);
+    }
+    #menu{
+    position: absolute;
+    z-index: 9998;
+    top: 0;
+    right: 0;
+    background: none;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    padding-top: 2.5rem;
+    overflow: auto;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    #menu a, #menu a:visited {
+    font-family: var(--font);
+    color: var(--color-accent);
+    display: inline-block;
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 1rem 0 0;
+}
 /*---------------------------------Header */
-/*---------------------------------Navigation */
+
 /*---------------------------------Main content */
+    #bntContainer {
+    width: 80%;
+}
+    #portContainer {
+    width: 80%;
+    -webkit-columns: 2;
+    columns: 2;
+}
     /* YouTube video embed code from embedresponsively.com */
 .embed-container {
     position: relative;
@@ -299,14 +359,16 @@ footer ul li{
     height: 100%;
 }
 /*---------------------------------Footer */
-}
-/* iPad Pro / Big Tablet */
-@media (min-width: 1024px){
-/*---------------------------------Header */
-/*---------------------------------Navigation */
-/*---------------------------------Main content */
-/*---------------------------------Footer */
-/*---------------------------------Footer */
+    footer{
+        text-align: right;
+    }
+    footer ul{
+        float: left;
+    }
+    footer a {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    }
 }
 /* Small screens */
 @media (min-width: 1280px){
@@ -321,12 +383,23 @@ footer ul li{
 /*---------------------------------Header */
 /*---------------------------------Navigation */
 /*---------------------------------Main content */
+        #bntContainer {
+    width: 80%;
+}
+    #portContainer {
+    width: 80%;
+    -webkit-columns: 4;
+    columns: 4;
+}
 /*---------------------------------Footer */
 /*---------------------------------Footer */
 }
 /* Full HD */
 @media (min-width: 1920px){
 /*---------------------------------Header */
+#logo {
+    height: 127%;
+}
 /*---------------------------------Navigation */
 /*---------------------------------Main content */
 /*---------------------------------Footer */
