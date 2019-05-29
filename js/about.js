@@ -21,9 +21,6 @@ function toggleMenu() {
     }
 }
 }
-menuBtns.onclick = function() {
-   console.log("clicked");
-}
 
 /* Reuse and modified from Huset-KBH assignment */
 const main = document.querySelector("about");
