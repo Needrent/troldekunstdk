@@ -23,7 +23,7 @@ function toggleMenu() {
 }
 
 /* Reuse and modified from Huset-KBH assignment */
-const main = document.querySelector("about");
+const main = document.querySelector("main");
 const banner = document.querySelector(".imageCrop img");
 const header = document.querySelector("h1");
 const tagline = document.querySelector("h3");
