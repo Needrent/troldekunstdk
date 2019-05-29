@@ -11,8 +11,42 @@ h4,
 p,
 a,
 li,
+input,
+textarea,
+select,
+option,
 span{
     font-family: var(--font);
+}
+input,
+textarea,
+select,
+option,
+::-webkit-input-placeholder{
+    color: var(--color-font);
+    font-weight: bold;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    -webkit-appearance: none;
+}
+input,
+textarea,
+select,
+option,
+:-ms-input-placeholder{
+    color: var(--color-font);
+    font-weight: bold;
+}
+input,
+textarea,
+select,
+option,
+::placeholder{
+    color: var(--color-font);
+    font-size: 1.4rem;
+    font-weight: 100;
 }
 ul{
     list-style: none;
@@ -243,7 +277,7 @@ iframe{
     width: calc(100% - 6rem);
     margin: 0 auto 7rem auto;
 }
-#bntContainer button{
+#bntContainer button,button{
     padding: 1rem;
     border: none;
     background: var(--color-btn-portfolio);
@@ -300,6 +334,36 @@ ul{
 }
 ul li span{
     display: block;
+}
+/* contact */
+form{
+    width: calc(100% - 3rem);
+    margin: auto;
+}
+form button{
+    float: none;
+    display: block;
+}
+input, textarea, select{
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1.5rem solid var(--color-btn-portfolio);
+    padding: 0.5rem;
+}
+input{
+    border-bottom: 0;
+}
+#price{
+    background: var(--color-btn-portfolio);
+    width: calc(100% - 3rem);
+    margin: auto;
+    padding: 2rem 2rem 0.5rem 4rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#price li{
+    color: var(--color-btn-hl);
 }
 /*---------------------------------Footer */
 footer{
