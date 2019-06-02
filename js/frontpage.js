@@ -21,7 +21,29 @@ function toggleMenu() {
         }
     }
 }
+// Video
+const videoBtn = document.querySelector("#movie-btn");
+const videoContainer = document.querySelector(".embed-container");
+const video = document.querySelector("video");
 
+
+videoBtn.addEventListener("click", openVideo);
+
+function openVideo(){
+    videoContainer.classList.toggle("hide");
+    video.play();
+
+    const closeBtn = document.querySelector(".close");
+
+    closeBtn.addEventListener("click", closeVideo);
+
+    function closeVideo(){
+    videoContainer.classList.toggle("hide");
+    closeBtn.removeEventListener("click", closeVideo);
+        video.pause();
+        video.currentTime = 0;
+}
+}
 
 /* reused and edited from the Huset-Kbh project */
 let myLink = "http://keawp.needrent.dk/wp-json/wp/v2/db_troldekunst?_embed";
