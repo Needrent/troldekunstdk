@@ -139,6 +139,18 @@ function show(data) {
             clone.querySelector("img").src = object._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url;
             console.log(object._embedded["wp:term"]["0"]["0"].name.toLowerCase());
             clone.querySelector("img").setAttribute('class', 'filterDiv ' + object._embedded["wp:term"]["0"]["0"].name.toLowerCase() + ' show');
+            let button = clone.querySelector(".portElemt");
+
+            button.addEventListener("click", function(){
+                //console.log(object.id);
+                modal.classList.remove("hide");
+                modal.querySelector("#modal-content img").src = object._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url;
+
+                if(modal.querySelector("#modal-info").innerHTML != null){
+                modal.querySelector("#modal-info").innerHTML = object.content.rendered;
+                }
+                //modal.querySelector("#modal-info p").textContent = object.format01 + " " + object.price01 + " DDK";
+		})
 
             // append to the DOM
             parent.appendChild(clone);
@@ -147,3 +159,13 @@ function show(data) {
 
 }
 loadData(myLink);
+
+/* Modal */
+let modalLink = "http://keawp.needrent.dk/wp-json/wp/v2/db_troldekunst?id=";
+
+const modal = document.querySelector("#modal-bg");
+
+modal.addEventListener("click", ()=>modal.classList.add("hide"));
+
+
+
