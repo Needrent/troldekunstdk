@@ -133,7 +133,7 @@ header{
 }
 #heading-con{
     width: calc(100% - 3rem);
-    margin: 10rem 0 0 3rem;
+    margin: -2rem 0 0 3rem;
 }
 #heading-con h1{
     text-align: left;
@@ -336,7 +336,10 @@ video{
     width: 80%;
     margin: 0 auto 4rem auto;
 }
-.portElemt {
+.filterDiv {
+    display: none;
+}
+.show{
     border: 1rem solid var(--color-portFrame);
     margin-bottom: 1.5rem;
     width: 100%;

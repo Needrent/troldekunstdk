@@ -28,7 +28,7 @@ const banner = document.querySelector(".imageCrop img");
 const header = document.querySelector("h1");
 const tagline = document.querySelector("h3");
 
-const baseLink = "http://keawp.needrent.dk/wp-json/wp/v2/db_troldekunst/168?_embed";
+const baseLink = "http://keawp.needrent.dk/wp-json/wp/v2/tk_about/174?_embed";
 
 function loadPageData(link){
     fetch(link).then(e=>e.json()).then(data=>showMenu(data));

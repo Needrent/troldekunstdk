@@ -70,7 +70,7 @@ function showMenu(data) {
             let fillBtn = object.name;
 
             newBtn.textContent = fillBtn; // fill the created element
-            newBtn.setAttribute('onClick', "filterSelection('" + object.name + "')");
+            newBtn.setAttribute('onClick', "filterSelection('" + object.name.toLowerCase() + "')");
             newBtn.setAttribute('class', 'btn');
 
             // Add active class to the current button (highlight it) /* W3Schools */
@@ -129,7 +129,6 @@ function w3RemoveClass(element, name) {
 
 loadMenuData(myCatLink);
 
-
 function show(data) {
     data.forEach(object => {
             console.log(object);
@@ -138,7 +137,8 @@ function show(data) {
 
             // populate the template
             clone.querySelector("img").src = object._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url;
-            clone.querySelector("img").setAttribute('class', 'filterDiv ' + object._embedded['wp:term']['0']['0'].name + ' show');
+            console.log(object._embedded["wp:term"]["0"]["0"].name.toLowerCase());
+            clone.querySelector("img").setAttribute('class', 'filterDiv ' + object._embedded["wp:term"]["0"]["0"].name.toLowerCase() + ' show');
 
             // append to the DOM
             parent.appendChild(clone);
