@@ -22,7 +22,6 @@ function toggleMenu() {
     }
 }
 
-
 /* Reuse and modified from Huset-KBH assignment */
 const priceUl = document.querySelector("#price");
 
