@@ -987,9 +987,6 @@ footer ul li::before {
 
 /* Full HD */
 @media (min-width: 1920px) {
-    /*---------------------------------Header */
-
-    /*---------------------------------Navigation */
     /*---------------------------------Main content */
     .embed-container{
         padding-top: 0;
