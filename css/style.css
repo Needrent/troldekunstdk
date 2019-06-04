@@ -378,9 +378,20 @@ video {
 #bntContainer {
     width: calc(100% - 6rem);
     margin: 0 auto 7rem auto;
+    text-align: center;
 }
 
-#bntContainer button,
+#bntContainer button{
+    padding: 1rem;
+    border: none;
+    background: var(--color-blue);
+    font-family: var(--font);
+    color: var(--color-orange);
+    font-size: 1.7rem;
+    margin: 0;
+    border-radius: 0;
+    margin: 0 0.3rem 1.5rem 0;
+}
 button {
     padding: 1rem;
     border: none;
@@ -389,10 +400,10 @@ button {
     color: var(--color-orange);
     font-size: 1.7rem;
     margin: 0;
-    float: left;
     border-radius: 0;
-    margin: 0 0.3rem 1.5rem 0;
+    margin: 0.5rem 0 1rem 0;
 }
+
 
 #bntContainer button:hover,
 .active {
