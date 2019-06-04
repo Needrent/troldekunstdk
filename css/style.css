@@ -293,7 +293,7 @@ nav {
 #arrow {
     position: absolute;
     padding: 3rem;
-    bottom: 2rem;
+    bottom: 0;
     width: 3rem;
     border: none;
     background: none;
@@ -304,15 +304,15 @@ nav {
 
 @-webkit-keyframes arrow {
     0% {
-        bottom: 2rem;
+        bottom: 0;
     }
 
     50% {
-        bottom: 5rem;
+        bottom: 2rem;
     }
 
     100% {
-        bottom: 2rem;
+        bottom: 0;
     }
 }
 
