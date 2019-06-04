@@ -454,7 +454,8 @@ button {
 }
 
 #modal-content img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 60vh;
 }
 
 #modal-content p {
@@ -465,7 +466,7 @@ button {
 
 #modal-content {
     margin: 1.5rem;
-    text-align: right;
+    text-align: center;
 }
 
 #modal-info {
@@ -848,7 +849,8 @@ footer ul li::before {
     }
 
     #modal-content img {
-        width: 100%;
+        width: auto;
+        max-height: 60vh;
     }
 
     #modal-content p {
@@ -908,9 +910,6 @@ footer ul li::before {
     #modal-info {
     width: 46%;
     float: left;
-}
-#modal-content img {
-    width: 50%;
 }
 #modal-content {
     width: 71%;
@@ -1015,9 +1014,6 @@ footer ul li::before {
         right: 10%;
         top: 3rem;
         z-index: 9999;
-    }
-    #modal-content img{
-        width: 50%;
     }
     #modal-info{
         width: 47%;
