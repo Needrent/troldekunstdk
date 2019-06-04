@@ -557,7 +557,6 @@ textarea {
 form button {
     grid-area: button;
 }
-}
 
 form button {
     float: none;
@@ -799,12 +798,6 @@ footer ul li::before {
         columns: 2;
     }
 
-    input,
-    textarea,
-    select {
-        /*width: 49%;*/
-    }
-
     form {
         display: grid;
         grid-template-areas:
@@ -912,6 +905,17 @@ footer ul li::before {
         margin: 9rem 0 0 0;
     }
     /*---------------------------------Main content */
+    #modal-info {
+    width: 46%;
+    float: left;
+}
+#modal-content img {
+    width: 50%;
+}
+#modal-content {
+    width: 71%;
+    margin: 1.5rem auto 0 auto;
+}
     #target ul {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
