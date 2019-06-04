@@ -46,7 +46,7 @@ function openVideo(){
 }
 
 /* reused and edited from the Huset-Kbh project */
-let myLink = "http://keawp.needrent.dk/wp-json/wp/v2/db_troldekunst?_embed";
+let myLink = "http://keawp.needrent.dk/wp-json/wp/v2/db_troldekunst?_embed&per_page=100";
 let myCatLink = "http://keawp.needrent.dk/wp-json/wp/v2/tk_category";
 const template = document.querySelector("#tempContent").content;
 const parent = document.querySelector("#portContainer");
